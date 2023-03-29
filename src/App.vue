@@ -1,6 +1,6 @@
 <script>
 import { store } from './store';
-import AppMain from './components/AppMain.vue'
+import AppMain from './components/AppMain.vue';
 
 export default {
     name: "App",
