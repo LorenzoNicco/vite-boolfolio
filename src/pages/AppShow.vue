@@ -1,21 +1,14 @@
 <script>
-import { store } from '../store';
-export default {
-    name: "ProjectCard",
-    data() {
-        return {
-            store,
-            defaultImage: 'https://media.istockphoto.com/id/1404184397/it/foto/alba-sul-lago-k%C3%B6nigssee-con-watzmann-sullo-sfondo-xxxl-panorama.jpg?b=1&s=170667a&w=0&k=20&c=N-dhhw94og46H9iv9doWJC8ecpltOCGj7-SytONrlEM='
-        };
-    },
-    props: [
-        'projects'
-    ]
-};
+    export default {
+        name: "AppShow"
+    }
 </script>
 
 <template>
-    <main>
+    <section>
+        <h1 class="mt-5 mb-3">Pagina dettaglio</h1>
+
+        
         <div v-for="project in store.projects" class="card">
             <h2>{{ project.title }}</h2>
 
@@ -42,7 +35,8 @@ export default {
 
             <button class="detail-button">Dettagli</button>
         </div>
-    </main>
+    
+    </section>
 </template>
 
 <style lang="scss" scoped>

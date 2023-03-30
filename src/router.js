@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
+import AppIndex from './pages/AppIndex.vue';
+import AppShow from './pages/AppShow.vue';
+
 const router = createRouter({
     history: createWebHistory(),
     routes: [

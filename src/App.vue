@@ -19,7 +19,7 @@ export default {
 </script>
 
 <template>
-    <AppMain />
+    <RouterView></RouterView>
 </template>
 
 <style lang="scss">
