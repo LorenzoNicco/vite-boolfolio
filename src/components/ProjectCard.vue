@@ -21,6 +21,17 @@ export default {
             <h6>{{ project.slug }}</h6>
 
             <h4>{{ project.type ? project.type.title : '-' }}</h4>
+            
+            <div v-if="project.technologies.length > 0">
+                <ul>
+                    <li v-for="technology in project.technologies">
+                        {{ technology.name }}
+                    </li>
+                </ul>
+            </div>
+            <div v-else>
+                <p>Tecnologia non specificata</p>
+            </div>
 
             <p>{{ project.description }}</p>
 
@@ -53,6 +64,13 @@ export default {
 
             p {
                 margin: 20px 0;
+            }
+
+            ul {
+                list-style: none;
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
             }
         }
     }
