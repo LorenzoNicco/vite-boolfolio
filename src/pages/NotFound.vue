@@ -1,12 +1,12 @@
 <script>
     export default {
-        name: "AppShow"
+        name: "NotFound"
     }
 </script>
 
 <template>
     <section>
-        <h1 class="mt-5 mb-3">Pagina dettaglio</h1>
+        <h1>404 Page not found</h1>
     </section>
 </template>
 
