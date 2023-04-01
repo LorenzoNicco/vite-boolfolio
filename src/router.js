@@ -13,7 +13,7 @@ const router = createRouter({
             component: AppIndex
         },
         {
-            path: '/show/:slug',
+            path: '/:slug',
             name: 'show',
             component: AppShow
         },

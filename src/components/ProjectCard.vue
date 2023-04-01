@@ -40,7 +40,9 @@ export default {
                 <img :src="project.img ?? defaultImage" alt="Immagine non presente">
             </div>
 
-            <button class="detail-button">Dettagli</button>
+            <button class="detail-button">
+                <router-link :to="{ name: 'show', params: { slug: project.slug } }">Dettagli</router-link>
+            </button>
         </div>
     </main>
 </template>
