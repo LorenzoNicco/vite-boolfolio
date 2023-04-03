@@ -40,9 +40,19 @@
 
             <h6>{{ project.slug }}</h6>
 
+            <h4>
+                {{ project.type ? project.type.title : 'Nessuna tipologia' }}
+            </h4>
+
             <p>{{ project.description }}</p>
 
-            <img :src="project.img ?? defaultImage" :alt="project.title">
+            <img :src="project.full_img_path ?? defaultImage" :alt="project.title">
+
+            <div v-if="project.technologies.length > 0">
+                <span class="technologies-span" v-for="technology in project.technologies">
+                    {{ technology.name }} 
+                </span>
+            </div>
         </div>
     </section>
 </template>
@@ -61,12 +71,16 @@
         padding: 20px;
     }
 
-    h6 {
+    h6, h4 {
         margin: 20px 0;
     }
 
     img {
         width: 50%;
-        margin-top: 20px;
+        margin: 20px 0;
+    }
+
+    .technologies-span {
+        margin-right: 10px;
     }
 </style>

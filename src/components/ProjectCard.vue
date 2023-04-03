@@ -37,7 +37,7 @@ export default {
             <p>{{ project.description }}</p>
 
             <div class="img-container">
-                <img :src="project.img ?? defaultImage" alt="Immagine non presente">
+                <img :src="project.full_img_path ?? defaultImage" alt="Immagine non presente">
             </div>
 
             <button class="detail-button">
